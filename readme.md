@@ -1,4 +1,4 @@
-# AME QA Engineer Challenge
+# Livelo QA Challenge
 
 ## Installing dependencies to run the project.
 
@@ -36,4 +36,4 @@ All gems contained in the Gemfile file have been installed. <b>:)</b>
 
 ### Log folder
 
-The log folder contains reports after executions and a bugs.txt file containing suggested bugs and possible improvements. Both files will not be in the repository in order to reduce the occupancy of the repository.
+The log folder contains reports after executions. Both files will not be in the repository in order to reduce the occupancy of the repository.
