@@ -3,7 +3,6 @@
 require 'appium_lib'
 require 'appium_console'
 require 'faker'
-require 'cpf_faker'
 require 'pry'
 
 DEVICE = ENV['DEVICE_TYPE']
