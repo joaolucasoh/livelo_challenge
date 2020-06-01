@@ -5,7 +5,7 @@ require 'date'
 
 Before do
   driver.start_driver
-  driver.manage.timeouts.implicit_wait = 100
+  driver.manage.timeouts.implicit_wait = 50
 
   @screen = DroidScreens.new
 end

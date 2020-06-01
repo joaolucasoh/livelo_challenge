@@ -14,28 +14,28 @@ module Android
   end
 
   class Register
+    include CommonsButtons
     attr_reader :register
 
     def register_screen?
-      @btn_new = find_element(xpath: '//*[contains(@text, "I AM NEW")]')
-      @btn_not_new = find_element(xpath: '//*[contains(@text, "I HAVE BEEN HERE")]')
-      @btn_skip = find_element(xpath: '//*[contains(@text, "Skip")]')
+      btn_im_new
+      btn_im_not_new
     end
 
     def fields?
-      @btn_new.click
-      @email = find_element(xpath: '//*[contains(@text, "E-mail")]')
-      @phone = find_element(xpath: '//*[contains(@text, "Phone number")]')
-      @passw = find_element(xpath: '//*[contains(@text, "Password")]')
+      btn_im_new.click
+      email
+      phone
+      passw
     end
 
     def happy_register
-      @email.click
-      @email.send_keys(Faker::Internet.email)
-      @phone.click
-      @phone.send_keys(Faker::PhoneNumber.cell_phone)
-      @passw.click
-      @passw.send_keys(Faker::Lorem.characters(number: 8))
+      email.click
+      email.send_keys(Faker::Internet.email)
+      phone.click
+      phone.send_keys(Faker::PhoneNumber.cell_phone)
+      passw.click
+      passw.send_keys(Faker::Lorem.characters(number: 8))
 
       2.times do
         find_element(xpath: '//*[contains(@text, "CREATE ACCOUNT")]').click
@@ -55,6 +55,24 @@ module Android
       sleep 3
       find_element(xpath: "//*[contains(@text, #{categories})]")
       find_element(xpath: "//*[contains(@text, #{popular})]")
+    end
+  end
+
+  class SkipCode
+    include CommonsButtons
+    attr_reader :skipcode
+
+    def skip_message?
+      btn_skip.click
+      find_element(id: 'android:id/alertTitle').displayed?
+    end
+
+    def confirm_skip_code
+      find_element(xpath: '//*[contains(@text, "OK")]').click
+    end
+
+    def skip_first
+      find_element(xpath: '//*[contains(@text, "Skip")]').click
     end
   end
 end
