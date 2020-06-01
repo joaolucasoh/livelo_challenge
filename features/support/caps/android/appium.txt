@@ -1,0 +1,11 @@
+[caps]
+platformName = "Android"
+deviceName = "Samsung Pixel 2"
+udid = "ce0317139df85ca90c"
+app = "/Users/joaolucas/Documents/automacao/pessoal/livelo/files/test_ifood.apk"
+autoGrantPermissions = "true"
+appActivity = "com.fooddelivery_pro.MainActivity"
+appPackage = "com.fooddelivery_pro"
+automationName = "uiautomator2"
+unicodeKeyboard = "true"
+resetKeyboard = "true"
