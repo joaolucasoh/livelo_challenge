@@ -1,3 +1,2 @@
-log/*.html
-log/*.png
-log/screenshots/*.png
+log/android/*.html
+log/ios/*.png
