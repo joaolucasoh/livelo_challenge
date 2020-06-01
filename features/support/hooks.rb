@@ -5,7 +5,7 @@ require 'date'
 
 Before do
   driver.start_driver
-  driver.manage.timeouts.implicit_wait = 50
+  driver.manage.timeouts.implicit_wait = 10
 
   @screen = DroidScreens.new
 end
@@ -36,9 +36,9 @@ at_exit do
                            "log/ios/#{DEVICE}_report"
                          end
     config.report_types = [:html]
-    config.report_title = 'AME - Cadastro de Cliente'
+    config.report_title = 'Livelo - Food'
     config.additional_info = @infos
-    config.color = 'indigo'
+    config.color = 'pink'
   end
   ReportBuilder.build_report
 end

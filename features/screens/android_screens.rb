@@ -49,10 +49,11 @@ module Android
       hide_keyboard
       find_element(xpath: '//*[contains(@text, "SUBMIT CODE")]').click
       find_element(xpath: '//*[contains(@text, "Please wait . . .")]')
+      find_element(xpath: '//*[contains(@text, "Loading")]')
     end
 
     def categories_page?(categories, popular)
-      sleep 3
+      sleep 2
       find_element(xpath: "//*[contains(@text, #{categories})]")
       find_element(xpath: "//*[contains(@text, #{popular})]")
     end
